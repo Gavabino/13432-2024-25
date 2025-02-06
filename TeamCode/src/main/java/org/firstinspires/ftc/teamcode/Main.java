@@ -115,7 +115,7 @@ public class Main extends LinearOpMode {
 
                 // Game pad 2
 
-                3if (gamepad2.dpad_up) {
+                if (gamepad2.dpad_up) {
                     slider.setPower(-1);
                 } else if (gamepad2.dpad_down) {
                     slider.setPower(1);
