@@ -122,6 +122,8 @@ public class Main extends LinearOpMode {
                     arm2.setPower(0);
                 }
 
+
+
                 if (gamepad2.dpad_down) {
                     armHinge.setPower(0.05);
                 } else if (gamepad2.dpad_up) {
