@@ -130,7 +130,11 @@ public class Main extends LinearOpMode {
                     armHinge.setPower(-0.25);
                 } else if (gamepad2.right_bumper) {
                     armHinge.setPower(0.25);
-                } else {
+                }
+                 else if (gamepad2.right_stick_button) {
+                armHinge.setPower(-1);
+                }
+                 else {
                     armHinge.setPower(-0.1125);
                 }
 
@@ -138,9 +142,7 @@ public class Main extends LinearOpMode {
                     right.setPower(-0.9);
                 } else if (gamepad2.dpad_left) {
                     right.setPower(0.9);
-                } else {
-                    right.setPower(0.01);
-                }
+
 
 
                 if (arm2.getCurrentPosition()<-512)
@@ -165,4 +167,4 @@ public class Main extends LinearOpMode {
             }
         }
     }
-}
+}}
