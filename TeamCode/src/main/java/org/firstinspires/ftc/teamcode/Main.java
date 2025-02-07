@@ -107,7 +107,7 @@ public class Main extends LinearOpMode {
                     leftRear.setPower(1);
                 }
                 if (gamepad2.y) {
-                    arm1.setPower(-0.5);
+                    arm1.setPower(-0.75);
                 } else if (gamepad2.a) {
                     arm1.setPower(1);
                 } else if (gamepad2.left_bumper) {
@@ -139,10 +139,11 @@ public class Main extends LinearOpMode {
                 }
 
                 if (gamepad2.dpad_right) {
-                    right.setPower(-0.9);
+                    right.setPower(-0.9999);
                 } else if (gamepad2.dpad_left) {
-                    right.setPower(0.9);
-
+                    right.setPower(0.9999);
+                } else if (gamepad2.left_stick_button) {
+                    right.setPower(0);
 
 
                 if (arm2.getCurrentPosition()<-512)
