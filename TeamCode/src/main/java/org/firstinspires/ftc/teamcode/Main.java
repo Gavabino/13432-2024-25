@@ -96,15 +96,15 @@ public class Main extends LinearOpMode {
                     leftRear.setPower(0);
                 }
                 if (gamepad1.right_stick_x > 0.5) {
-                    rightFront.setPower(1);
+                    rightFront.setPower(-1);
                     leftFront.setPower(-1);
                     rightRear.setPower(1);
-                    leftRear.setPower(-1);
+                    leftRear.setPower(1);
                 } else if (gamepad1.right_stick_x < -0.5) {
-                    rightFront.setPower(-1);
+                    rightFront.setPower(1);
                     leftFront.setPower(1);
                     rightRear.setPower(-1);
-                    leftRear.setPower(1);
+                    leftRear.setPower(-1);
                 }
                 if (gamepad2.y) {
                     arm1.setPower(-0.75);
@@ -116,8 +116,10 @@ public class Main extends LinearOpMode {
                 }
                 if (gamepad2.x) {
                     arm2.setPower(-1);
+
                 } else if (gamepad2.b) {
                     arm2.setPower(1);
+
                 } else {
                     arm2.setPower(0);
                 }
@@ -127,12 +129,12 @@ public class Main extends LinearOpMode {
                 if (gamepad2.dpad_down) {
                     armHinge.setPower(0.05);
                 } else if (gamepad2.dpad_up) {
-                    armHinge.setPower(-0.25);
+                    armHinge.setPower(-0.50);
                 } else if (gamepad2.right_bumper) {
                     armHinge.setPower(0.25);
                 }
                  else if (gamepad2.right_stick_button) {
-                armHinge.setPower(-1);
+                leftRear.setPower(-1);
                 }
                  else {
                     armHinge.setPower(-0.1125);
@@ -144,7 +146,7 @@ public class Main extends LinearOpMode {
                     right.setPower(0.9999);
                 } else if (gamepad2.left_stick_button) {
                     right.setPower(0);
-
+                }
 
                 if (arm2.getCurrentPosition()<-512)
                     armHinge.setPower(-0.5);
@@ -165,7 +167,8 @@ public class Main extends LinearOpMode {
 
 
 
+
             }
         }
     }
-}}
+}
